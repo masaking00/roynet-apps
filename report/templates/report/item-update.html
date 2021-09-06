@@ -1,0 +1,74 @@
+{% extends "register/base.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col">
+        <h1>データ更新</h1>
+    </div>
+</div><br>
+<div class="row">
+    <div class="col">
+        <h5><u>
+        {{founditems.FoundItems_Year}}年{{founditems.FoundItems_Month}}月度の報告
+        </u></h5>
+    </div>
+    <div class="col">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th>ファイル選択：</th>
+                    <td>{{ form.files }}※クリアはできません</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>現在のファイル：</th>
+                    <td>
+                        {% if not founditems.files %}
+                            未アップロード
+                        {% else %}
+                            <a href={{founditems.files.url }}>{{ founditems.files }}</a>
+                        {% endif %}            
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>報告者名：</th>
+                    <td>{{ form.create_user }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>報告日：</th>
+                    <td>{{ form.create_date }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>コメント：</th>
+                    <td>{{ form.memo }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th><input type="submit" value="保存する"></th>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <button type="button" class="btn btn-secondary"
+        onclick="location.href='{{request.META.HTTP_REFERER}}'">ひとつ前へ戻る</button>
+    </div>
+</div>
+{% endblock %}

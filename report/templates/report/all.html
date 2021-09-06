@@ -1,0 +1,17 @@
+{% extends "register/base.html" %}
+{% block content %}
+
+<form method="POST">
+{% csrf_token %}
+<input type="text" id="year" name="year" value="{{ year }}">
+<input type="text" id="month" name="month" value="{{ month }}">
+
+    <input type="submit">
+
+</form>
+
+    {% for found in data %}
+        <p>・{{ found.ReportDate_year }}年{{ found.ReportDate_month }}月</p>
+    {% endfor %}
+
+{% endblock %}
