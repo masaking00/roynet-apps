@@ -15,7 +15,7 @@ INSTALLED_APPS = [
     #3rd party
     'rest_framework',
     'django_filters',
-    'djoser',
+    #'djoser',
     'corsheaders',
     'import_export',
 
