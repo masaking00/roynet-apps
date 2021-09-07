@@ -67,7 +67,7 @@ DATABASES = {
         'NAME': 'sampleapp_db',
         'USER': 'root',
         'PASSWPRD': '123456789',
-        'HOST':'',
+        'HOST':'118.27.16.78',
         'PORT':'3306',
     }
 }
