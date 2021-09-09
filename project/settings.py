@@ -67,8 +67,8 @@ DATABASES = {
         'NAME': 'roynet',
         'USER': 'root',
         'PASSWPRD': '123456789',
-        'HOST':'118.27.16.78',
-        'PORT':'3306',
+        'HOST':'',
+        'PORT':'',
     }
 }
 
