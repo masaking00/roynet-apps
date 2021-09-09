@@ -15,7 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #3rd party
-    'rest_framework',
+    #'rest_framework',
     'django_filters',
     #'djoser',
     'corsheaders',
@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     #original
     'register.apps.RegisterConfig',
     'report.apps.ReportConfig',
-    'api.apps.ApiConfig',
+    #'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
