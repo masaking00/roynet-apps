@@ -18,8 +18,8 @@ INSTALLED_APPS = [
     #'rest_framework',
     #'django_filters',
     #'djoser',
-    'corsheaders',
-    'import_export',
+    #'corsheaders',
+    #'import_export',
 
     #original
     'register.apps.RegisterConfig',
