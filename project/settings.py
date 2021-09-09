@@ -63,14 +63,11 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'roynet',
-        'USER': 'root',
-        'PASSWPRD': '123456789',
-        'HOST':'118.27.16.78',
-        'PORT':'',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
