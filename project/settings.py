@@ -91,6 +91,7 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/usr/share/nginx/html/static'
 
 AUTH_USER_MODEL = 'register.User'
 
@@ -99,5 +100,8 @@ LOGIN_REDIRECT_URL = 'register:top'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-MEDIA_URL = "/media/"
+#MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+#MEDIA_URL = "/media/"
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/usr/share/nginx/html/media'
