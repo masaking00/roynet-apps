@@ -1,0 +1,30 @@
+{% extends "register/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h3>Manual List</h3>
+    </div>
+</div><br>
+<div class="row">
+    <div class="col">
+        <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">カテゴリー</th>
+            <th scope="col">タイトル</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in object_list %}
+            <tr>
+            <td>{{ post.p_category }}</td>
+            <td><a href="{% url 'manual:post_detail' post.pk %}">■　{{ post.p_order }}　■　{{ post.p_title }}</a></td>
+            </tr> 
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+</div
+
+
+{% endblock %}

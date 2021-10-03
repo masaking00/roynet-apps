@@ -1,0 +1,14 @@
+{% extends "register/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h3>{{ post.p_category }}</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+    <h4>{{ post.p_order }}  :  {{ post.p_title }}</h4>
+    {{ post.p_body | linebreaksbr }}
+    </div>
+</div
+{% endblock %}
