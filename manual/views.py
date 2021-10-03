@@ -5,7 +5,7 @@ from manual.models import Post
 
 class PostListView(generic.ListView):
     model = Post
-    template_name = "post_list.html"
+    template_name = "manual/post_list.html"
 
 class PostDetailView(generic.DetailView):
     model = Post
